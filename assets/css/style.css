@@ -1,2 +1,16 @@
 /* Google import */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:ital,wght@0,100;0,400;1,100&display=swap');
+
+.quiz-section {
+    background: #cdd0e0;
+    position: relative;
+    box-sizing: border-box;
+    width: 85%;
+    height: 40vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+
+}
