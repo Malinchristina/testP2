@@ -37,9 +37,38 @@ h1 {
 }
 
 .squares {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     flex-direction: row;
     width: 80%;
     height: 80%;
+    max-width: 830px;
+    max-height: 830px;
+    
 
+}
+
+#orange {
+    background-color: #ef6306;
+    width: 50%;
+    height: 50%;
+}
+
+#blue {
+    background-color: #64d0ee;
+    width: 50%;
+    height: 50%;
+}
+
+#green {
+    background-color: #24d438;
+    width: 50%;
+    height: 50%;
+}
+
+#yellow {
+    background-color: #eeee64;
+    width: 50%;
+    height: 50%;
 }
