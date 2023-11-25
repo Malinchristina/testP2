@@ -1,6 +1,27 @@
 /* Google import */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:ital,wght@0,100;0,400;1,100&display=swap');
 
+/* Asterisk wildcard selector to overide deafult styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styling */
+
+body {
+    color: #1c1d1e;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #1c1d1e;
+    font-family: "Libre Baskerville", serif;
+    text-align: center;
+}
+
 .quiz-section {
     background: #cdd0e0;
     position: relative;
@@ -12,5 +33,13 @@
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
+
+}
+
+.squares {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 80%;
 
 }
