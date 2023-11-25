@@ -20,55 +20,44 @@ h1 {
     color: #1c1d1e;
     font-family: "Libre Baskerville", serif;
     text-align: center;
-}
-
-.quiz-section {
-    background: #cdd0e0;
-    position: relative;
-    box-sizing: border-box;
-    width: 85%;
-    height: 40vh;
-    max-height: 450px;
-    max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
-
-}
-
-.squares {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    flex-direction: row;
-    width: 80%;
-    height: 80%;
-    max-width: 830px;
-    max-height: 830px;
-    
-
+    padding: 6vw 0 4vw 0;
 }
 
 #orange {
     background-color: #ef6306;
-    width: 50%;
-    height: 50%;
 }
 
 #blue {
     background-color: #64d0ee;
-    width: 50%;
-    height: 50%;
 }
 
 #green {
     background-color: #24d438;
-    width: 50%;
-    height: 50%;
 }
 
 #yellow {
     background-color: #eeee64;
-    width: 50%;
-    height: 50%;
 }
+
+.squares-top,
+.squares-bottom {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2vw 0 2vw;
+    justify-content: center;
+}
+/*
+.squares-bottom {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+}*/
+
+.squares-top >span,
+.squares-bottom>span {
+  display: inline-block;
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+}
+ 
