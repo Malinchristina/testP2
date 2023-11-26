@@ -14,6 +14,7 @@ body {
     color: #1c1d1e;
     font-family: "Roboto", sans-serif;
     text-align: center;
+    background-color: #FECC00;
 }
 
 h1 {
@@ -23,12 +24,28 @@ h1 {
     padding: 6vw 0 4vw 0;
 }
 
+h2 {
+    color: #ffffff;
+    font-family: "Libre Baskerville", serif;
+    margin: 1rem 0 1rem 0;
+}
+
+p {
+    color: #ffffff;
+}
+
+
 .quiz-area {
     /*background: url(..assets/images/squares.webp) no-repeat center/cover;*/
-    background-color: rgb(27, 80, 126);
+    background-color: #006AA7;
     position: relative;
-    height: 85%;
     width: 85%;
+    height: 55vh;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2vw;
+    border-radius: 10px;
 } 
 /*
 #orange {
@@ -63,8 +80,29 @@ h1 {
   height: 12rem;
 }
  */
+
+ #name {
+    color: #ffffff;
+ }
+
+#enter-name {
+    width: 11rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    text-align: center;
+    margin-top: 1rem;
+}
+
 .btn {
     background-color: #1c1d1e;
-    border-radius: 2px;
+    border-radius: 10px;
     color: aliceblue;
+    width: 11rem;
+    height: 2rem;
+    border: 1px solid #ffffff;
+}
+
+#play {
+    margin: 1rem 0 1rem 0;
 }
