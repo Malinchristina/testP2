@@ -36,7 +36,7 @@ p {
     line-height: 1.4rem;
 }
 
-.quiz-area {
+.game-area {
     background-color: #006AA7;
     position: relative;
     width: 85%;
@@ -79,4 +79,9 @@ i.fa-solid.fa-check {
 }
 i.fa-solid.fa-xmark {
     color: red;
+}
+
+i.fa-solid.fa-down-long {
+    color: #ffffff;
+    margin: 1rem 0 1rem 0;
 }
