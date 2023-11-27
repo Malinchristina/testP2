@@ -15,13 +15,15 @@
     <title>The Swedish Quiz</title>
 </head>
 <body> 
-    <h1>The Swedish Quiz <i class="fa-solid fa-circle-question"></i></h1>
+    <h1>The Swedish Quiz</h1>
    
     <!--Intro area-->    
 
     <div class="quiz-area">
             <h2>What do you know about Sweden?</h2>
-            <p>The long country up north in Europe, known for all its lakes and vast nature. What do you know about it? Test your knowledge in this game.</p>
+            <p>The long country up north in Europe, known for all its lakes and vast nature. What do you know about it? Test your knowledge in this quiz.</p>
+            <br>
+            <p>Best of luck! <i class="fa-regular fa-thumbs-up"></i></p>
             <br>
         <label id="name" for="enter-name">Enter your name:</label>
         <br>
@@ -32,14 +34,21 @@
         </div>
     </div>
 
-    <!-- Questions -->
+    <!-- Game area -->
 
     <div id="questions-area" class="hide">
         <h2 class="questions">Questions</h2>
+        <div id="answers-area" class="hide">
+        </div>
+        <div>
+            <button id="next" class="btn">Next</button>
+        </div>
     </div>
-    <div id="answers-area" class="hide">
+    <div class="score-area">
+        <p class="scores">Correct <i class="fa-solid fa-check"></i> <span id="score">0</span></p>
+        <p class="scores">Incorrect <i class="fa-solid fa-xmark"></i> <span id="incorrect">0</span></p>
     </div>
-    
+
     <!-- Footer 
     <footer>
         <div class="footer">
