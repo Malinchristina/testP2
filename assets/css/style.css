@@ -47,39 +47,6 @@ p {
     padding: 2vw;
     border-radius: 10px;
 } 
-/*
-#orange {
-    background-color: #ef6306;
-}
-
-#blue {
-    background-color: #64d0ee;
-}
-
-#green {
-    background-color: #24d438;
-}
-
-#yellow {
-    background-color: #eeee64;
-}
-
-.squares-top,
-.squares-bottom {
-    display: flex;
-    flex-direction: row;
-    padding: 0 2vw 0 2vw;
-    justify-content: center;
-}
-
-.squares-top >span,
-.squares-bottom>span {
-  display: inline-block;
-  position: relative;
-  width: 12rem;
-  height: 12rem;
-}
- */
 
  #name {
     color: #ffffff;
