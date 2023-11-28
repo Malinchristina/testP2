@@ -1,9 +1,26 @@
 import { questions } from "./questions.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
+// Load DOM fully before running the quiz
 
-    // Forstätt med alla buttons
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.getElementsByTagName("button");
+
+    // Button variables
+
+    const playGame = this.doctype.getElementById("play");
+    const nextGame = this.doctype.getElementById("next");
+    const quitGame = this.doctype.getElementById("quit");
+    const playGameAgain = this.doctype.getElementById("play-again");
+    const instructions = this.doctype.getElementById("instructions-modal");
+
+    // Add event listeners to buttons
+
+    playGame.addEventListener("Click", runGame);
+    nextGame.addEventListener("Click", runNextQuestion);
+    quitGame.addEventListener("Click", quitGame);
+    playGameAgain.addEventListener("Click", runGame);
+    instructions.addEventListener("Click", runInstructions);
+
 }    
 
 // Get the virables
