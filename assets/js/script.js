@@ -3,7 +3,8 @@ import { questions } from "./questions.js";
 // Load DOM fully before running the quiz
 
 document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.getElementsByTagName("button");
+    const nameInput = document.getElementsByTagName("name-input");
+    nameInput.focus();
 
     // Button variables
 

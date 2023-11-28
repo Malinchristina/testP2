@@ -100,10 +100,14 @@ p {
     margin: 1rem;
 }
 
-#play,
 #instructions {
-    margin: 1rem 0 0.5rem 0;
+    margin-top: 1rem;
 }
+
+#play {
+    margin: 1rem 0 1rem 0;
+}
+
 
 i.fa-solid.fa-check {
     color: #63d01b;
