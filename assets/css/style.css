@@ -55,6 +55,7 @@ p {
     margin-right: auto;
     padding: 2vw;
     border-radius: 10px;
+    box-shadow: 0 0 6px 1px rgb(65, 76, 79);
 } 
 
 #name {
