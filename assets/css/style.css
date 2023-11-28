@@ -36,7 +36,7 @@ p {
     line-height: 1.4rem;
 }
 
-.game-area {
+#game-area {
     background-color: #006AA7;
     position: relative;
     width: 85%;

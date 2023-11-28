@@ -19,7 +19,7 @@
    
     <!--Game area-->    
 
-    <div class="game-area">
+    <div id="game-area" class="">
             <h2>What do you know about Sweden?</h2>
             <p>The long country up north in Europe, known for all its lakes and vast nature. What do you know about it? Test your knowledge in this quiz.</p>
             <br>
@@ -30,7 +30,7 @@
         <input type="text" placeholder="Enter your name" id="enter-name" name="enter-name">
         <div class="button-area">
             <button id="play" class="btn">Play</button>
-            <button id="sound" class="btn">Sound</button>
+            <!--<button id="sound" class="btn">Sound</button>-->
         </div>
     </div>
 
@@ -38,19 +38,19 @@
 
     <div id="questions-area" class="hide">
         <h2 class="questions">Questions</h2>
-        <div id="answers-area" class="hide">
+        <div class="answers-area">
         </div>
         <div>
             <button id="next" class="btn">Next</button>
         </div>
     </div>
-    <div class="score-area">
+    <div id="score-area" class="hide">
         <p class="scores">Correct <i class="fa-solid fa-check"></i> <span id="score">0</span></p>
         <p class="scores">Incorrect <i class="fa-solid fa-xmark"></i> <span id="incorrect">0</span></p>
     </div>
 
     <!-- Resume area -->
-    <div class="resume">
+    <div id="resume" class="hide">
         <h2>Well Played!</h2>
         <p>Want to play again?</p>
         <i class="fa-solid fa-down-long fa-2x"></i>
@@ -67,9 +67,9 @@
         </div>
 
     </footer>-->
-    <!-- Font awesome kit-->
+    <!-- Font awesome kit and Javascript-->
     <script src="https://kit.fontawesome.com/efed2a2412.js" crossorigin="anonymous"></script>
-    
+    <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js" type="module"></script>
 </body>
 </html>
