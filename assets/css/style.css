@@ -41,6 +41,10 @@ p {
     line-height: 1.4rem;
 }
 
+.hide {
+    display: none;
+}
+
 #game-area {
     background-color: #006AA7;
     position: relative;
@@ -88,7 +92,7 @@ p {
 
 #instructions-content {
     background-color: #006AA7;
-    
+
 }
 
 #instructions-content > p {
@@ -96,8 +100,9 @@ p {
     margin: 1rem;
 }
 
-#play {
-    margin: 1rem 0 1rem 0;
+#play,
+#instructions {
+    margin: 1rem 0 0.5rem 0;
 }
 
 i.fa-solid.fa-check {
