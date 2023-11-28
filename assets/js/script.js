@@ -1,4 +1,4 @@
-import { questions } from "./questions.js";
+import { quizQuestions } from "./questions.js";
 
 // Load DOM fully before running the quiz
 
