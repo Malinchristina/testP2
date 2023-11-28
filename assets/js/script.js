@@ -24,6 +24,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 }    
 
+// Modal
+
+let modal = document.getElementById("instructions-modal");
+const instructions = document.getElementById("instructions");
+let span = document.getElementById("close")[0];
+instructions.onclick = function() {
+    modal.style.display = "block"
+}
+
 // Get the virables
 
 const gameArea = document.getElementsByClassName("game-area");
@@ -45,6 +54,10 @@ function nextQuestion() {
 
 function checkAnswer() {
 
+}
+
+function resetScore(){
+    
 }
 
 function playAgain() {
