@@ -12,8 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextGame = doctype.getElementById("next");
     const quitGame = doctype.getElementById("quit");
     const playGameAgain = doctype.getElementById("play-again");
-    //const instructions = doctype.getElementById("instructions-modal");
-
+    
     // Add event listeners to buttons
 
     playGame.addEventListener("click", startQuiz);
@@ -53,6 +52,11 @@ function checkUserName() {
 
 function startQuiz() {
     resetScore();
+
+}
+
+function showQuestions(questions,) {
+
 
 }
 
