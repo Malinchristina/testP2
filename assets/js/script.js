@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Modal FUNKAR EJ
 
-let modal = document.getElementById("instructions-modal");
-const instructions = document.getElementById("instructions");
-let span = document.getElementById("close")[0];
-instructions.onclick = function() {
-    modal.style.display = "block"
+let instructionsPopup = document.getElementById("instructions-modal");
+const instructionsButton = document.getElementById("instructions");
+let span = document.getElementsByClassName("close")[0];
+instructionsButton.onclick = function () {
+    instructionsPopup.style.display = "block";
 }
 
 // Get the variables
@@ -46,7 +46,7 @@ function openInstructions() {
 
 function checkUserName() {
 
-    
+
 }
 
 function startQuiz() {
