@@ -44,7 +44,13 @@ function openInstructions() {
 
 }
 
+function checkUserName() {
+
+    
+}
+
 function startQuiz() {
+    resetScore();
 
 }
 
