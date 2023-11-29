@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nextGame.addEventListener("click", nextQuestion);
     quitGame.addEventListener("click", endGame);
     playGameAgain.addEventListener("click", playAgain);
-    instructions.addEventListener("click", openInstructions);
+   // instructions.addEventListener("click", openInstructions);
 
 }    
 
