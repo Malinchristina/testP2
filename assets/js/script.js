@@ -16,11 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add event listeners to buttons
 
-    playGame.addEventListener("Click", startQuiz);
-    nextGame.addEventListener("Click", nextQuestion);
-    quitGame.addEventListener("Click", quitGame);
-    playGameAgain.addEventListener("Click", playAgain);
-    instructions.addEventListener("Click", runInstructions);
+    playGame.addEventListener("click", startQuiz);
+    nextGame.addEventListener("click", nextQuestion);
+    quitGame.addEventListener("click", endGame);
+    playGameAgain.addEventListener("click", playAgain);
+    instructions.addEventListener("click", openInstructions);
 
 }    
 
@@ -40,7 +40,7 @@ const questionsArea = document.getElementsByClassName("questions-area");
 const scoreArea = document.getElementsByClassName("score-area");
 const resume = document.getElementsByClassName("resume");
 
-function instructions() {
+function openInstructions() {
 
 }
 
@@ -68,7 +68,7 @@ function playAgain() {
 
 }
 
-function quitGame() {
+function endGame() {
 
 
 }
