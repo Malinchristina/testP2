@@ -8,11 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add button variables
 
-    const playGame = this.doctype.getElementById("play");
-    const nextGame = this.doctype.getElementById("next");
-    const quitGame = this.doctype.getElementById("quit");
-    const playGameAgain = this.doctype.getElementById("play-again");
-    const instructions = this.doctype.getElementById("instructions-modal");
+    const playGame = doctype.getElementById("play");
+    const nextGame = doctype.getElementById("next");
+    const quitGame = doctype.getElementById("quit");
+    const playGameAgain = doctype.getElementById("play-again");
+    const instructions = doctype.getElementById("instructions-modal");
 
     // Add event listeners to buttons
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 }    
 
-// Modal
+// Modal FUNKAR EJ
 
 let modal = document.getElementById("instructions-modal");
 const instructions = document.getElementById("instructions");
