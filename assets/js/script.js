@@ -32,6 +32,11 @@ let span = document.getElementsByClassName("close")[0];
 instructionsButton.onclick = function () {
     instructionsPopup.style.display = "block";
 }
+// Close modal
+span.onclick = function () {
+    instructionsPopup.style.display = "none";
+}
+
 
 // Get the variables
 
@@ -40,9 +45,6 @@ const questionsArea = document.getElementsByClassName("questions-area");
 const scoreArea = document.getElementsByClassName("score-area");
 const resume = document.getElementsByClassName("resume");
 
-function openInstructions() {
-
-}
 
 function checkUserName() {
 

@@ -41,9 +41,12 @@ p {
     line-height: 1.4rem;
 }
 
+/* Hide content not visible all the time */
 .hide {
     display: none;
 }
+
+/* Game area*/
 
 #game-area {
     background-color: #006AA7;
@@ -79,6 +82,9 @@ p {
     height: 2rem;
     border: 1px solid #ffffff;
 }
+
+/*Style modal*/
+
 .modal {
     display: none;
         position: fixed;
@@ -124,6 +130,7 @@ p {
     margin: 1rem 0 1rem 0;
 }
 
+/* Quiz area */
 
 i.fa-solid.fa-check {
     color: #63d01b;
