@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.getElementsByTagName("name-input");
     nameInput.focus();
 
-    // Button variables
+    // Add button variables
 
     const playGame = this.doctype.getElementById("play");
     const nextGame = this.doctype.getElementById("next");
@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Add event listeners to buttons
 
-    playGame.addEventListener("Click", runGame);
-    nextGame.addEventListener("Click", runNextQuestion);
+    playGame.addEventListener("Click", startQuiz);
+    nextGame.addEventListener("Click", nextQuestion);
     quitGame.addEventListener("Click", quitGame);
-    playGameAgain.addEventListener("Click", runGame);
+    playGameAgain.addEventListener("Click", playAgain);
     instructions.addEventListener("Click", runInstructions);
 
 }    
@@ -33,12 +33,16 @@ instructions.onclick = function() {
     modal.style.display = "block"
 }
 
-// Get the virables
+// Get the variables
 
 const gameArea = document.getElementsByClassName("game-area");
 const questionsArea = document.getElementsByClassName("questions-area");
 const scoreArea = document.getElementsByClassName("score-area");
 const resume = document.getElementsByClassName("resume");
+
+function instructions() {
+
+}
 
 function startQuiz() {
 
@@ -56,10 +60,15 @@ function checkAnswer() {
 
 }
 
-function resetScore(){
+function resetScore() {
     
 }
 
 function playAgain() {
+
+}
+
+function quitGame() {
+
 
 }
