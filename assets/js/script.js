@@ -1,4 +1,4 @@
-import { quizQuestions } from "./questions.js";
+// import { quizQuestions } from "./questions.js";
 
 // Load DOM fully before running the quiz
 
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextGame = doctype.getElementById("next");
     const quitGame = doctype.getElementById("quit");
     const playGameAgain = doctype.getElementById("play-again");
-    const instructions = doctype.getElementById("instructions-modal");
+    //const instructions = doctype.getElementById("instructions-modal");
 
     // Add event listeners to buttons
 
@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
     playGameAgain.addEventListener("click", playAgain);
    // instructions.addEventListener("click", openInstructions);
 
-}    
+} )  
 
-// Modal FUNKAR EJ
+// Modal for instructions
 
 let instructionsPopup = document.getElementById("instructions-modal");
 const instructionsButton = document.getElementById("instructions");
