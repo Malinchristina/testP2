@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,24 +16,25 @@
 
     <title>The Swedish Quiz</title>
 </head>
-<body> 
+
+<body>
     <h1>The Swedish Quiz</h1>
-   
-    <!--Game area-->    
+
+    <!--Game area-->
 
     <div id="game-area" class="">
-            <h2>What do you know about Sweden?</h2>
-            <p>The long country up north in Europe, known for all its lakes and vast nature. What do you know about it? Test your knowledge in this quiz.</p>
-            <br>
-            <p>Best of luck! <i class="fa-regular fa-thumbs-up"></i></p>
-            <br>
+        <h2>What do you know about Sweden?</h2>
+        <p>The long country up north in Europe, known for all its lakes and vast nature. What do you know about it? Test
+            your knowledge in this quiz.</p>
+        <br>
+        <p>Best of luck! <i class="fa-regular fa-thumbs-up"></i></p>
+        <br>
         <label id="name" for="enter-name">Enter your name:</label>
         <br>
         <input type="text" placeholder="Enter your name" id="enter-name" name="enter-name" required>
         <div class="button-area">
             <button id="instructions" class="btn">Instructions</button>
-            <button id="play" class="btn">Play</button>
-            <!--<button id="sound" class="btn">Sound</button>-->
+            <button id="play" class="btn" data-type="start">Play</button>
         </div>
     </div>
 
@@ -52,16 +54,16 @@
 
     <div id="questions-area" class="hide">
         <h2 class="questions">Questions</h2>
-        <div class="answers-area">
-        </div>
+        <div id="questions">Test Q</div>
+        <div class="answers-area"></div>
+        <div class="option1">Option 1</div>
+        <div class="option2">Option 2</div>
+        <div class="option3">Option 3</div>
         <div>
-            <button id="next" class="btn">Next</button>
-            <button id="quit" class="btn">Quit</button>
+            <button id="next" class="btn" data-type="next">Next</button>
+            <button id="quit" class="btn" data-type="quit">Quit</button>
         </div>
     </div>
-
-    <!-- ADD ANSWER BUTTONS-->
-
     <div id="score-area" class="hide">
         <p class="scores">Correct <i class="fa-solid fa-check"></i> <span id="correctscore">0</span></p>
         <p class="scores">Incorrect <i class="fa-solid fa-xmark"></i> <span id="incorrectscore">0</span></p>
@@ -73,7 +75,7 @@
         <p>Want to play again?</p>
         <i class="fa-solid fa-down-long fa-2x"></i>
         <br>
-        <button id="play-again" class="btn">Play again</button>
+        <button id="play-again" class="btn" data-type="play-again">Play again</button>
     </div>
 
     <!-- Footer 
@@ -89,4 +91,5 @@
     <script src="assets/js/questions.js"></script>
     <script src="assets/js/script.js" type="module"></script>
 </body>
+
 </html>

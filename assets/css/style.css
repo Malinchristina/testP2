@@ -46,6 +46,10 @@ p {
     display: none;
 }
 
+.visible {
+    display: block;
+}
+
 /* Game area*/
 
 #game-area {
@@ -59,11 +63,11 @@ p {
     padding: 2vw;
     border-radius: 10px;
     box-shadow: 0 0 6px 1px rgb(65, 76, 79);
-} 
+}
 
 #name {
     color: #ffffff;
- }
+}
 
 #enter-name {
     width: 11rem;
@@ -87,18 +91,18 @@ p {
 
 .modal {
     display: none;
-        position: fixed;
-        z-index: 1;
-        left: 2rem;
-        top: 5rem;
-        width: 80%;
-        height: 50%;
-        overflow: auto;
-        background-color: #FECC00;
-        border-color: #000000;
-        border-radius: 10px;
-        border: #000000 1px solid;
-    
+    position: fixed;
+    z-index: 1;
+    left: 2rem;
+    top: 5rem;
+    width: 80%;
+    height: 50%;
+    overflow: auto;
+    background-color: #FECC00;
+    border-color: #000000;
+    border-radius: 10px;
+    border: #000000 1px solid;
+
 }
 
 .close {
@@ -135,6 +139,7 @@ p {
 i.fa-solid.fa-check {
     color: #63d01b;
 }
+
 i.fa-solid.fa-xmark {
     color: red;
 }
