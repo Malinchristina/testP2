@@ -70,6 +70,7 @@ function checkUserName() {
 function startQuiz() {
     const gameArea = document.getElementById("game-area");
     gameArea.classList.add("hide");
+    questionsArea.classList.remove("hide");
     questionsArea.classList.add("visible");
 
 }

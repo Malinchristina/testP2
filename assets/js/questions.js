@@ -2,7 +2,7 @@
  * All questions are generated from ChatGPT
  */
 
-export const quizQuestions = [
+const quizQuestions = [
     {
         question: "Sweden is known for its extensive archipelago. How many islands does the Stockholm archipelago consist of approximately?",
         answers: {
