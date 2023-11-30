@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (this.getAttribute("data-type") === "next") {
                 nextQuestion();
             } else if (this.getAttribute("data-type") === "quit") {
-                quitGame();
+                endGame();
             } else if (this.getAttribute("data-type") === "play-again") {
                 playAgain();
             }
