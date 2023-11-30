@@ -75,7 +75,6 @@ function startQuiz() {
 }
 
 function showQuestions(questions,) {
-    let;
 
 
 }
