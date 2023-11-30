@@ -95,6 +95,10 @@ function checkAnswer() {
 
 }
 
+function incrementScore() {}
+
+function incrementIncorrectScore() {}
+
 function resetScore() {
 
 }
