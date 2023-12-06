@@ -14,9 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 endGame();
             } else if (this.getAttribute("data-type") === "play-again") {
                 playAgain();
-            } /*else if (this.getAttribute("data-type") === "submit") {
-                submitAnswer();
-            } */
+            } 
         });
     }
 
@@ -64,6 +62,7 @@ let displayAnswerB = document.getElementById("answersB");
 let displayAnswerC = document.getElementById("answersC");
 let numberOfQuestions = 0;
 let questionIndex = 0;
+let score = 0;
 
 const answerColor = [displayAnswerA, displayAnswerB, displayAnswerC];
 
@@ -73,7 +72,7 @@ displayAnswerB.addEventListener("click", checkAnswer);
 displayAnswerC.addEventListener("click", checkAnswer);
 
 
-// OK
+// Check so user name is entered
 function checkUserName() {
     const userName = userNameLabel.value.trim();
 
@@ -85,7 +84,7 @@ function checkUserName() {
 }
 
 
-// OK
+// Starting the quiz
 function startQuiz() {
     gameArea.classList.add("hide");
     questionsArea.classList.remove("hide");
@@ -130,7 +129,7 @@ function showQuestion() {
     displayAnswerB.innerText = `b. ${currentQuestion.answers.b}`;
     displayAnswerC.innerText = `c. ${currentQuestion.answers.c}`;
 
-
+    resetBackgroundColor();
 
     // Let user play 10 questions
     numberOfQuestions++;
@@ -140,7 +139,7 @@ function showQuestion() {
 
 }
 
-
+// Check selected answer
 function checkAnswer(event) {
     const selectedAnswer = event.target.dataset.type;
     const correctAnswer = quizQuestions[questionIndex].correctAnswer;
@@ -150,6 +149,7 @@ function checkAnswer(event) {
         answer.style.pointerEvents = 'none';
     });
 
+    // Color correct answer green, incorrect red
     if (selectedAnswer === correctAnswer) {
         event.target.style.backgroundColor = "green";
         incrementScore();
@@ -158,36 +158,44 @@ function checkAnswer(event) {
         incrementIncorrectScore();
     }
 
+    disableClickAnswers();
+
 }
 
-
+// Enable next question
 function playNextQuestion() {
-    // Check if there are more questions
+
+    // Check if there are questions left
     if (questionIndex < quizQuestions.length - 1) {
+
         // Increment the question index
         questionIndex++;
+
         // Show the next question
         showQuestion();
     } else {
-        // All questions have been played, you can end the game or perform any other action
+        // All questions have been played
         stopGame();
     }
-
-    // HOW TO DO WITH THIS?
-    answerColor.forEach(answer => {
-        answer.style.backgroundColor = "";
-    });
-
+    
 }
 
 // HOW TO DO WITH THIS?
 
-/*function removeBackgroundColor() {
+function resetBackgroundColor() {
     answerColor.forEach(answer => {
         answer.style.backgroundColor = "";
+        answer.style.pointerEvents = 'auto';
     });
-}*/
+}
 
+function disableClickAnswers() {
+    answerColor.forEach(answer => {
+        answer.removeEventListener("click", checkAnswer);
+        answer.style.pointerEvents = 'none';
+    });
+
+}
 
 // Is this needed? Can endGame be called?
 function stopGame() {
