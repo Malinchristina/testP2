@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextQuestion = document.getElementById("next");
     const quitGame = document.getElementById("quit");
     const playGameAgain = document.getElementById("play-again");
-    //const submitTheAnswer = document.getElementById("submit-answer");
-
+    
 });
 
 
@@ -65,6 +64,7 @@ let questionIndex = 0;
 let score = 0;
 let chosenAnswer = false;
 
+// Array to enable/disable color to indicate correct/incorrect answer
 const answerColor = [displayAnswerA, displayAnswerB, displayAnswerC];
 
 // Add event listeners to answers buttons
@@ -73,7 +73,7 @@ displayAnswerB.addEventListener("click", checkAnswer);
 displayAnswerC.addEventListener("click", checkAnswer);
 
 
-// Check so user name is entered
+// Check that user name is entered
 function checkUserName() {
     const userName = userNameLabel.value.trim();
 
@@ -85,7 +85,7 @@ function checkUserName() {
 }
 
 
-// Starting the quiz
+// Initiate quiz
 function startQuiz() {
     gameArea.classList.add("hide");
     questionsArea.classList.remove("hide");
@@ -100,7 +100,7 @@ function startQuiz() {
 // OK
 /**
  * Function to call questions in random order no matter if there are
- * new questions added or removed. REMOVE IF NOT SHOW MORE THAN != Qs?
+ * new questions added or removed. 
  */
 function shuffleQuizQuestions() {
     let randomQuestions = Math.floor(Math.random() * quizQuestions.length);
@@ -120,7 +120,7 @@ function shuffleQuizQuestions() {
 }
 
 
-// NOT OK, CAN RUN Q'S OVER N OVER
+// Show questions
 function showQuestion() {
     const currentQuestion = quizQuestions[questionIndex];
     displayQuestions.innerText = currentQuestion.question;
@@ -134,7 +134,7 @@ function showQuestion() {
 
     // Let user play 10 questions
     numberOfQuestions++;
-    if (numberOfQuestions === 10) { //Change to 10 after testing
+    if (numberOfQuestions === 4) { //Change to 11 after testing
         stopGame();
     }
 
@@ -154,7 +154,7 @@ function checkAnswer(event) {
         event.target.style.backgroundColor = "red";
         incrementIncorrectScore();
     }
-
+    // ADD COMMENT
     document.querySelectorAll('.answers').forEach(answer => {
         answer.removeEventListener('click', checkAnswer);
         answer.style.pointerEvents = 'none';
@@ -166,7 +166,7 @@ function checkAnswer(event) {
 
 }
 
-// Enable next question
+// Show next question
 function playNextQuestion() {
 
     // Check if there are questions left
@@ -175,22 +175,20 @@ function playNextQuestion() {
         // Increment the question index
         questionIndex++;
 
-        // Show the next question
         showQuestion();
         chosenAnswer = false;
     } else {
         if (questionIndex === quizQuestions.length - 1) {
             endGame();
+        // Alert if no question is clicked    
         } else {
             alert("Select an answer please");
         }
-        
     }
     
 }
 
-// HOW TO DO WITH THIS?
-
+// Reset color and add event listener
 function resetBackgroundColor() {
     answerColor.forEach(answer => {
         answer.style.backgroundColor = "";
@@ -199,6 +197,7 @@ function resetBackgroundColor() {
     });
 }
 
+// Remove event listener when answer is chosen
 function disableClickAnswers() {
     answerColor.forEach(answer => {
         answer.removeEventListener("click", checkAnswer);
@@ -219,7 +218,7 @@ function incrementIncorrectScore() { }
 
 function resetScore() { }
 
-// OK
+//Restart the game
 function playAgain() {
     resume.classList.add("hide");
     resume.classList.remove("visible");
@@ -227,7 +226,7 @@ function playAgain() {
     questionsArea.classList.remove("hide");
 
 }
-// OK
+//End game if user want to quit in the middle of the game
 function endGame() {
     questionsArea.classList.remove("visible");
     questionsArea.classList.add("hide");
