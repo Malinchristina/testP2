@@ -63,6 +63,7 @@ let displayAnswerC = document.getElementById("answersC");
 let numberOfQuestions = 0;
 let questionIndex = 0;
 let score = 0;
+let chosenAnswer = false;
 
 const answerColor = [displayAnswerA, displayAnswerB, displayAnswerC];
 
@@ -133,7 +134,7 @@ function showQuestion() {
 
     // Let user play 10 questions
     numberOfQuestions++;
-    if (numberOfQuestions === 4) { //Change to 10 after testing
+    if (numberOfQuestions === 10) { //Change to 10 after testing
         stopGame();
     }
 
@@ -144,10 +145,6 @@ function checkAnswer(event) {
     const selectedAnswer = event.target.dataset.type;
     const correctAnswer = quizQuestions[questionIndex].correctAnswer;
 
-    document.querySelectorAll('.answers').forEach(answer => {
-        answer.removeEventListener('click', checkAnswer);
-        answer.style.pointerEvents = 'none';
-    });
 
     // Color correct answer green, incorrect red
     if (selectedAnswer === correctAnswer) {
@@ -158,7 +155,14 @@ function checkAnswer(event) {
         incrementIncorrectScore();
     }
 
+    document.querySelectorAll('.answers').forEach(answer => {
+        answer.removeEventListener('click', checkAnswer);
+        answer.style.pointerEvents = 'none';
+    });
+
     disableClickAnswers();
+
+    chosenAnswer = true;
 
 }
 
@@ -166,16 +170,21 @@ function checkAnswer(event) {
 function playNextQuestion() {
 
     // Check if there are questions left
-    if (questionIndex < quizQuestions.length - 1) {
+    if (questionIndex < quizQuestions.length - 1 && chosenAnswer) {
 
         // Increment the question index
         questionIndex++;
 
         // Show the next question
         showQuestion();
+        chosenAnswer = false;
     } else {
-        // All questions have been played
-        stopGame();
+        if (questionIndex === quizQuestions.length - 1) {
+            endGame();
+        } else {
+            alert("Select an answer please");
+        }
+        
     }
     
 }
@@ -185,6 +194,7 @@ function playNextQuestion() {
 function resetBackgroundColor() {
     answerColor.forEach(answer => {
         answer.style.backgroundColor = "";
+        answer.addEventListener("click", checkAnswer);
         answer.style.pointerEvents = 'auto';
     });
 }
