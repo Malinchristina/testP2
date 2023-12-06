@@ -110,9 +110,9 @@ const quizQuestions = [
     {
         question: "In the Swedish calendar, what celebration takes place on the 13th of December, featuring a procession of people dressed in white robes and candles?",
         answers: {
-            a: "St. Lucia’s Day",
-            b: "St Patrick’s Day",
-            c: "St Mary’s Day"
+            a: "St. Lucia's Day",
+            b: "St Patrick's Day",
+            c: "St Mary's Day"
         },
         correctAnswer: "a"
     },
