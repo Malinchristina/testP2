@@ -45,8 +45,9 @@
             <h3>How to play!</h3>
             <p>1. Click play to start.</p>
             <p>2. Read the question and select one of the three for your answer.</p>
-            <p>3. Press the "Next" button to move on to the next question.</p>
-            <p>4. Press quit if you want to quit the game before the last qestion.</p>
+            <p>3. Click Submit to find out the correct answer.</p>
+            <p>4. Press the "Next" button to move on to the next question.</p>
+            <p>5. Press quit if you want to quit the game before the last qestion.</p>
         </div>
     </div>
 
@@ -54,20 +55,27 @@
 
     <div id="questions-area" class="hide">
         <h2 class="questions">Questions</h2>
-        <div id="questions">Test Q</div>
+        <div id="questions"></div>
         <div class="answers-area">
-            <div id="optionA" class="option1">Option a</div>
-            <div id="optionB" class="option2">Option b</div>
-            <div id="optionA" class="option3">Option c</div>
+            <!--<input type="radio" id="answersA" name="answer" value="">
+            <label for="answersA"></label><br>
+            <input type="radio" id="answersB" name="answer" value="">
+            <label for="answersB"></label><br>  
+            <input type="radio" id="answersC" name="answer" value="">
+            <label for="answersC"></label><br><br>-->
+            <div id="answersA" class="answers" data-type="a"></div>
+            <div id="answersB" class="answers" data-type="b"></div>
+            <div id="answersC" class="answers" data-type="c"></div>
         </div>
         <div>
+            <!--<button id="submit-answer" class="btn" data-type="answer">Submit</button>-->
             <button id="next" class="btn" data-type="next">Next</button>
             <button id="quit" class="btn" data-type="quit">Quit</button>
         </div>
     </div>
     <div id="score-area" class="hide">
-        <p class="scores">Correct <i class="fa-solid fa-check"></i> <span id="correctscore">0</span></p>
-        <p class="scores">Incorrect <i class="fa-solid fa-xmark"></i> <span id="incorrectscore">0</span></p>
+        <p class="correctscore">Correct <i class="fa-solid fa-check"></i> <span id="correctscore">0</span></p>
+        <p class="incorrectscore">Incorrect <i class="fa-solid fa-xmark"></i> <span id="incorrectscore">0</span></p>
     </div>
 
     <!-- Resume area -->
