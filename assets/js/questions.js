@@ -1,10 +1,6 @@
-/**
- * All questions are generated from ChatGPT
- */
-
 const quizQuestions = [
     {
-        question: "Sweden is known for its extensive archipelago. How many islands does the Stockholm archipelago consist of approximately?",
+        question: "What is the official language of Sweden?",
         answers: {
             a: "Finish",
             b: "Norwegian",
@@ -138,5 +134,5 @@ const quizQuestions = [
         },
         correctAnswer: "a"
     },
-]
+];
 
