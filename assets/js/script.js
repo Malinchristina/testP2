@@ -151,6 +151,7 @@ function checkAnswer(event) {
         event.target.style.backgroundColor = "green";
         incrementScore();
     } else {
+        revealCorrectAnswer();
         event.target.style.backgroundColor = "red";
         incrementIncorrectScore();
     }
@@ -210,6 +211,18 @@ function disableClickAnswers() {
 function stopGame() {
     endGame();
 
+}
+// Show correct answer in color green when answered incorrect
+function revealCorrectAnswer() {
+    const correctAnswerElement = getAnswerElementByType(quizQuestions[questionIndex].correctAnswer);
+    if (correctAnswerElement) {
+        correctAnswerElement.style.backgroundColor = "green";
+    }
+
+}
+
+function getAnswerElementByType(type) {
+    return answerColor.find(answer => answer.dataset.type === type);
 }
 
 function incrementScore() { }
