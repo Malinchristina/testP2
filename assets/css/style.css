@@ -54,7 +54,7 @@ p {
     background-color: #006AA7;
     position: relative;
     width: 85%;
-    height: 80vh;
+    height: auto;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
@@ -67,7 +67,7 @@ p {
     background-color: #006AA7;
         position: relative;
         width: 85%;
-        height: 60vh;
+        height: auto;
         box-sizing: border-box;
         margin-left: auto;
         margin-right: auto;
@@ -102,7 +102,7 @@ p {
     z-index: 1;
     top: 5rem;
     width: 80%;
-    height: 40%;
+    height: auto;
     overflow: auto;
     background-color: #FECC00;
     border-color: #000000;
@@ -147,11 +147,11 @@ p {
     border-radius: 10px;
     color: #000000;
     width: 100%;
+    height: auto;
     border: 1px solid #000000;
     margin: 0.5rem auto;
     padding: 1rem;
-    min-height: 4rem;
-    
+        
 }
 
 #questions {
@@ -168,7 +168,8 @@ p {
 }
 
 #quit {
-    margin-top: 1rem;
+    margin: 1rem 0 1rem 0;
+    
 }
 
 

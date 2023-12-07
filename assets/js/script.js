@@ -87,6 +87,10 @@ function checkUserName() {
 
 // Initiate quiz
 function startQuiz() {
+    // Reset user name
+    userNameLabel.value = "";
+    score = 0;
+
     gameArea.classList.add("hide");
     questionsArea.classList.remove("hide");
     questionsArea.classList.add("visible");
@@ -118,7 +122,6 @@ function shuffleQuizQuestions() {
     return shuffledQuestion;
 
 }
-
 
 // Show questions
 function showQuestion() {
@@ -225,9 +228,15 @@ function getAnswerElementByType(type) {
     return answerColor.find(answer => answer.dataset.type === type);
 }
 
-function incrementScore() { }
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById("correctscore").innerText);
+    document.getElementById("correctscore").innerText = ++oldScore;
+ }
 
-function incrementIncorrectScore() { }
+function incrementIncorrectScore() {
+    let oldScore = parseInt(document.getElementById("incorrectscore").innerText);
+    document.getElementById("incorrectscore").innerText = ++oldScore;
+ }
 
 function resetScore() { }
 
@@ -235,11 +244,11 @@ function resetScore() { }
 function playAgain() {
     resume.classList.add("hide");
     resume.classList.remove("visible");
-    questionsArea.classList.add("visible");
-    questionsArea.classList.remove("hide");
+    gameArea.classList.add("visible");
+    gameArea.classList.remove("hide");
 
 }
-//End game if user want to quit in the middle of the game
+//End game if user want to quit beforhand
 function endGame() {
     questionsArea.classList.remove("visible");
     questionsArea.classList.add("hide");
