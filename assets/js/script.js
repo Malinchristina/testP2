@@ -61,7 +61,7 @@ let displayAnswerB = document.getElementById("answersB");
 let displayAnswerC = document.getElementById("answersC");
 let numberOfQuestions = 0;
 let questionIndex = 0;
-let score = 0;
+let correctScore = 0;
 let incorrectScore = 0;
 let chosenAnswer = false;
 
@@ -91,8 +91,8 @@ function startQuiz() {
     //Reset user name
     userNameLabel.value = "";
     // Reset score DOES NOT WORK
-    score = 0;
-    incorrectscore = 0;
+    correctScore = 0;
+    incorrectScore = 0;
 
     gameArea.classList.add("hide");
     questionsArea.classList.remove("hide");
@@ -232,12 +232,12 @@ function getAnswerElementByType(type) {
 }
 
 function incrementScore() {
-    let oldScore = parseInt(document.getElementById("correct-score").innerText);
+    let oldScore = parseInt(document.getElementById("correctscore").innerText);
     document.getElementById("correct-score").innerText = ++oldScore;
  }
 
 function incrementIncorrectScore() {
-    let oldScore = parseInt(document.getElementById("incorrect-score").innerText);
+    let oldScore = parseInt(document.getElementById("incorrectscore").innerText);
     document.getElementById("incorrect-score").innerText = ++oldScore;
  }
 

@@ -174,11 +174,13 @@ p {
 }
 
 
-.correct-score {
+.correctscore {
+    color: #000000;
     margin-top: 0.5rem;
 }
 
-.incorrect-score {
+.incorrectscore {
+    color: #000000;
     margin-bottom: 0.5rem;
 }
 
