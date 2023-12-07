@@ -113,6 +113,7 @@ p {
 
 .close {
     font-size: 2rem;
+    margin-top: .5rem;
 }
 
 .close:hover,
@@ -123,11 +124,11 @@ p {
 }
 
 #instructions-content {
-    line-height: 2rem;
+    color: #000000;
 }
 
 #instructions-content p {
-    line-height: 2rem;
+    line-height: 1.4rem;
     margin: 0 1rem 0 1rem;
 }
 
@@ -173,11 +174,11 @@ p {
 }
 
 
-.correctscore {
+.correct-score {
     margin-top: 0.5rem;
 }
 
-.incorrectscore {
+.incorrect-score {
     margin-bottom: 0.5rem;
 }
 

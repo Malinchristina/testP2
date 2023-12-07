@@ -62,6 +62,7 @@ let displayAnswerC = document.getElementById("answersC");
 let numberOfQuestions = 0;
 let questionIndex = 0;
 let score = 0;
+let incorrectScore = 0;
 let chosenAnswer = false;
 
 // Array to enable/disable color to indicate correct/incorrect answer
@@ -87,9 +88,11 @@ function checkUserName() {
 
 // Initiate quiz
 function startQuiz() {
-    // Reset user name
+    //Reset user name
     userNameLabel.value = "";
+    // Reset score DOES NOT WORK
     score = 0;
+    incorrectscore = 0;
 
     gameArea.classList.add("hide");
     questionsArea.classList.remove("hide");
@@ -98,8 +101,8 @@ function startQuiz() {
     scoreArea.classList.add("visible");
 
     showQuestion();
+    
 }
-
 
 // OK
 /**
@@ -229,13 +232,13 @@ function getAnswerElementByType(type) {
 }
 
 function incrementScore() {
-    let oldScore = parseInt(document.getElementById("correctscore").innerText);
-    document.getElementById("correctscore").innerText = ++oldScore;
+    let oldScore = parseInt(document.getElementById("correct-score").innerText);
+    document.getElementById("correct-score").innerText = ++oldScore;
  }
 
 function incrementIncorrectScore() {
-    let oldScore = parseInt(document.getElementById("incorrectscore").innerText);
-    document.getElementById("incorrectscore").innerText = ++oldScore;
+    let oldScore = parseInt(document.getElementById("incorrect-score").innerText);
+    document.getElementById("incorrect-score").innerText = ++oldScore;
  }
 
 function resetScore() { }
