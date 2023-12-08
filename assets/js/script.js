@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 endGame();
             } else if (this.getAttribute("data-type") === "play-again") {
                 playAgain();
-            } 
+            }
         });
     }
- 
+
 });
 
 
@@ -94,7 +94,7 @@ function startQuiz() {
     scoreArea.classList.add("visible");
 
     showQuestion();
-    
+
 }
 
 // OK
@@ -134,6 +134,7 @@ function showQuestion() {
     // Let user play 10 questions
     numberOfQuestions++;
     if (numberOfQuestions === 4) { //Change to 11 after testing
+        numberOfQuestions = 0;
         endGame();
     }
 
@@ -180,12 +181,12 @@ function playNextQuestion() {
     } else {
         if (questionIndex === quizQuestions.length - 1) {
             endGame();
-        // Alert if no question is clicked    
+            // Alert if no question is clicked    
         } else {
             alert("Select an answer please");
         }
     }
-    
+
 }
 
 // Reset color and add event listener
@@ -223,19 +224,19 @@ function getAnswerElementByType(type) {
 function incrementScore() {
     let oldScore = parseInt(document.getElementById("correctscore").innerText);
     document.getElementById("correctscore").innerText = ++oldScore;
- }
+}
 
 function incrementIncorrectScore() {
     let oldScore = parseInt(document.getElementById("incorrectscore").innerText);
     document.getElementById("incorrectscore").innerText = ++oldScore;
- }
+}
 
 function resetScore() {
     correctScore = 0;
     incorrectScore = 0;
     document.getElementById("correctscore").innerText = "0";
     document.getElementById("incorrectscore").innerText = "0";
- }
+}
 
 //Restart the game
 function playAgain() {
