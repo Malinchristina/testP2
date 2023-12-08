@@ -91,8 +91,8 @@ function startQuiz() {
     //Reset user name
     userNameLabel.value = "";
     // Reset score DOES NOT WORK
-    correctScore = 0;
-    incorrectScore = 0;
+    //correctScore = 0;
+    //incorrectScore = 0;
 
     gameArea.classList.add("hide");
     questionsArea.classList.remove("hide");
@@ -233,12 +233,12 @@ function getAnswerElementByType(type) {
 
 function incrementScore() {
     let oldScore = parseInt(document.getElementById("correctscore").innerText);
-    document.getElementById("correct-score").innerText = ++oldScore;
+    document.getElementById("correctscore").innerText = ++oldScore;
  }
 
 function incrementIncorrectScore() {
     let oldScore = parseInt(document.getElementById("incorrectscore").innerText);
-    document.getElementById("incorrect-score").innerText = ++oldScore;
+    document.getElementById("incorrectscore").innerText = ++oldScore;
  }
 
 function resetScore() { }
