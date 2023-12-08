@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } 
         });
     }
-
-    
+ 
 });
 
 
@@ -87,7 +86,7 @@ function startQuiz() {
     //correctScore = 0;
     //incorrectScore = 0;
 
-    gameArea.classList.remove("hide");
+    gameArea.classList.remove("visible");
     gameArea.classList.add("hide");
     questionsArea.classList.remove("hide");
     questionsArea.classList.add("visible");
@@ -238,8 +237,8 @@ function incrementIncorrectScore() {
 function resetScore() {
     correctScore = 0;
     incorrectScore = 0;
-    document.getElementById("correctscore").innerText = ++oldScore;
-    document.getElementById("incorrectscore").innerText = ++oldScore;
+    document.getElementById("correctscore").innerText = "0";
+    document.getElementById("incorrectscore").innerText = "0";
  }
 
 //Restart the game
