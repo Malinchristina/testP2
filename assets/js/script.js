@@ -134,7 +134,7 @@ function showQuestion() {
     // Let user play 10 questions
     numberOfQuestions++;
     if (numberOfQuestions === 4) { //Change to 11 after testing
-        stopGame();
+        endGame();
     }
 
 }
@@ -206,11 +206,7 @@ function disableClickAnswers() {
 
 }
 
-// Is this needed? Can endGame be called?
-function stopGame() {
-    endGame();
 
-}
 // Show correct answer in color green when answered incorrect
 function revealCorrectAnswer() {
     const correctAnswerElement = getAnswerElementByType(quizQuestions[questionIndex].correctAnswer);
