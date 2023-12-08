@@ -18,13 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
-    // Add button variables
-
-    const playGame = document.getElementById("play");
-    const nextQuestion = document.getElementById("next");
-    const quitGame = document.getElementById("quit");
-    const playGameAgain = document.getElementById("play-again");
     
 });
 
@@ -94,6 +87,7 @@ function startQuiz() {
     //correctScore = 0;
     //incorrectScore = 0;
 
+    gameArea.classList.remove("hide");
     gameArea.classList.add("hide");
     questionsArea.classList.remove("hide");
     questionsArea.classList.add("visible");
@@ -241,16 +235,23 @@ function incrementIncorrectScore() {
     document.getElementById("incorrectscore").innerText = ++oldScore;
  }
 
-function resetScore() { }
+function resetScore() {
+    correctScore = 0;
+    incorrectScore = 0;
+    document.getElementById("correctscore").innerText = ++oldScore;
+    document.getElementById("incorrectscore").innerText = ++oldScore;
+ }
 
 //Restart the game
 function playAgain() {
+    resetScore();
     resume.classList.add("hide");
     resume.classList.remove("visible");
     gameArea.classList.add("visible");
     gameArea.classList.remove("hide");
 
 }
+// DOES NOT WORK, SHOW GAMEAREA WHEN QUIZ AREA IS CALLED
 //End game if user want to quit beforhand
 function endGame() {
     questionsArea.classList.remove("visible");
