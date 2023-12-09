@@ -77,14 +77,19 @@ function checkUserName() {
     }
 }
 
-// Modal that shows as popup when user do not enter user name
+// Modal that shows as popup when user do not enter user
 function userNameModal() {
     let userNamePopup = document.getElementById("alert-name-input-area");
     userNamePopup.style.display = "block";
 
     // Close modal
-    let span = document.getElementsByClassName("close-name-input")[0];
-    span.onclick = function () {
+    let closeUserName = document.getElementsByClassName("close-name-input")[0];
+    let okButton = document.getElementById("ok");
+    okButton.addEventListener("click", function() {
+        userNamePopup.style.display = "none";
+    });
+    
+    closeUserName.onclick = function () {
         userNamePopup.style.display = "none";
     };
 }
