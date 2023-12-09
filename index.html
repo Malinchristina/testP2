@@ -29,9 +29,17 @@
         <br>
         <p>Best of luck! <i class="fa-regular fa-thumbs-up"></i></p>
         <br>
-        <label id="name" for="enter-name">Enter your name:</label>
+        <label id="name" for="enter-name"></label>
         <br>
         <input type="text" placeholder="Enter your name" id="enter-name" name="enter-name" required>
+        
+        <!--Pop up for user name input-->
+        <div id="alert-name-input-area" class="modal-input-area">
+            <div id="alert-name-input">
+                <span class="close-name-input">&times;</span>
+                <p>Enter your name please!</p>
+            </div>
+        </div>
         <div class="button-area">
             <button id="instructions" class="btn">Instructions</button>
             <button id="play" class="btn" data-type="start">Play</button>
@@ -59,21 +67,11 @@
         <h2 class="questions">Questions</h2>
         <div id="questions"></div>
         <div class="answers-area">
-            <!--<input type="radio" id="answersA" name="answer" value="">
-            <label for="answersA"></label><br>
-            <input type="radio" id="answersB" name="answer" value="">
-            <label for="answersB"></label><br>  
-            <input type="radio" id="answersC" name="answer" value="">
-            <label for="answersC"></label><br><br>-->
-           <!-- <div id="answersA" class="answers" data-type="a"></div>
-            <div id="answersB" class="answers" data-type="b"></div>
-            <div id="answersC" class="answers" data-type="c"></div>-->
             <button id="answersA" class="answers" data-type="a">Answer A</button>
             <button id="answersB" class="answers" data-type="b">Answer B</button>
             <button id="answersC" class="answers" data-type="c">Answer C</button>
         </div>
         <div>
-            <!--<button id="submit-answer" class="btn" data-type="answer">Submit</button>-->
             <button id="next" class="btn" data-type="next">Next</button>
             <button id="quit" class="btn" data-type="quit">Quit</button>
         </div>
