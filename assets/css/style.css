@@ -38,7 +38,7 @@ p {
     line-height: 1.4rem;
 }
 
-/* Hide content not visible all the time */
+/* Hide or add content not visible all the time */
 .hide {
     display: none;
 }
@@ -94,7 +94,7 @@ p {
     border: 1px solid #ffffff;
 }
 
-/*Style modal*/
+/*Style modals*/
 
 .modal {
     display: none;
@@ -110,7 +110,7 @@ p {
     border: #000000 1px solid;
     margin: 10%;
 }
-
+/* Instructions modal*/
 .close {
     font-size: 2rem;
     margin-top: .5rem;
@@ -135,6 +135,28 @@ p {
 #instructions {
     margin-top: 1rem;
 }
+/* User name modal*/
+.close-name-input {
+    font-size: 2rem;
+    margin-top: .5rem;
+}
+
+.close-name-input:hover,
+.close-name-input:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#alert-name-input {
+    color: #000000;
+}
+
+#alert-name-input p {
+    line-height: 1.4rem;
+    margin: 0 1rem 1rem 1rem;
+}
+
 
 #play {
     margin: 1rem 0 1rem 0;

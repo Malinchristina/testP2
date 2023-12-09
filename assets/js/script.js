@@ -71,12 +71,23 @@ function checkUserName() {
     const userName = userNameLabel.value.trim();
 
     if (userName === "") {
-        alert("Enter your name please");
+        userNameModal();
     } else {
         startQuiz();
     }
 }
 
+// Modal that shows as popup when user do not enter user name
+function userNameModal() {
+    let userNamePopup = document.getElementById("alert-name-input-area");
+    userNamePopup.style.display = "block";
+
+    // Close modal
+    let span = document.getElementsByClassName("close-name-input")[0];
+    span.onclick = function () {
+        userNamePopup.style.display = "none";
+    };
+}
 
 // Initiate quiz
 function startQuiz() {
