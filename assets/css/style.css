@@ -50,7 +50,8 @@ p {
 /* Game area*/
 
 #game-area,
-#questions-area {
+#questions-area,
+#resume {
     background-color: #006AA7;
     position: relative;
     width: 85%;
@@ -63,7 +64,7 @@ p {
     box-shadow: 0 0 6px 1px rgb(65, 76, 79);
 }
 
-#resume {
+/*#resume {
     background-color: #006AA7;
         position: relative;
         width: 85%;
@@ -74,7 +75,7 @@ p {
         padding: 2vw;
         border-radius: 10px;
         box-shadow: 0 0 6px 1px rgb(65, 76, 79);
-}
+}*/
 
 #enter-name {
     width: 11rem;
@@ -93,6 +94,15 @@ p {
     height: 2rem;
     border: 1px solid #ffffff;
 }
+.btn-ok {
+    background-color: #1c1d1e;
+    border-radius: 10px;
+    color: aliceblue;
+    width: 5rem;
+    height: 2rem;
+    border: 1px solid #ffffff;
+    margin-bottom: 1rem;
+}
 
 /*Style modals*/
 
@@ -110,6 +120,22 @@ p {
     border: #000000 1px solid;
     margin: 10%;
 }
+
+.modal-ok {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 5rem;
+    width: 60%;
+    height: auto;
+    overflow: auto;
+    background-color: #FECC00;
+    border-color: #000000;
+    border-radius: 10px;
+    border: #000000 1px solid;
+    margin: 10%;
+}
+
 /* Instructions modal*/
 .close {
     font-size: 2rem;
@@ -135,36 +161,23 @@ p {
 #instructions {
     margin-top: 1rem;
 }
-/* User name modal*/
-.close-name-input {
-    font-size: 2rem;
-    margin-top: .5rem;
-}
 
-.close-name-input:hover,
-.close-name-input:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-#alert-name-input {
+/*Name input and answer modal*/
+#alert-name-input,
+#select-answer {
     color: #000000;
 }
 
-#alert-name-input p {
-    line-height: 1.4rem;
-    margin: 0 1rem 1rem 1rem;
+#alert-name-input p,
+#select-answer p {
+    margin: 1rem;
 }
-
 
 #play {
     margin: 1rem 0 1rem 0;
 }
 
 /* Quiz area */
-
-
 .answers {
     background-color: #FECC00;
     border-radius: 10px;
@@ -173,8 +186,7 @@ p {
     height: auto;
     border: 1px solid #000000;
     margin: 0.5rem auto;
-    padding: 1rem;
-        
+    padding: 1rem;    
 }
 
 #questions {
@@ -191,11 +203,14 @@ p {
 }
 
 #quit {
-    margin: 1rem 0 1rem 0;
-    
+    margin: 1rem 0 1rem 0;    
 }
 
+#play-again {
+    margin-bottom: 1.4rem;
+}
 
+/* Score*/
 .correctscore {
     color: #000000;
     margin-top: 0.5rem;
@@ -216,7 +231,4 @@ i.fa-solid.fa-xmark {
 
 i.fa-solid.fa-down-long {
     margin: 1rem 0 1rem 0;
-}
-#play-again {
-    margin-bottom: 1.4rem;
 }
