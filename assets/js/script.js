@@ -83,7 +83,7 @@ function userNameModal() {
     userNamePopup.style.display = "block";
 
     // Close modal
-    let closeUserName = document.getElementsByClassName("close-name-input")[0];
+    //let closeUserName = document.getElementsByClassName("close-name-input")[0];
     let okButton = document.getElementById("ok");
     okButton.addEventListener("click", function() {
         userNamePopup.style.display = "none";
@@ -199,10 +199,28 @@ function playNextQuestion() {
             endGame();
             // Alert if no question is clicked    
         } else {
-            alert("Select an answer please");
+            //alert("Select an answer please");
+            selectAnswerModal();
         }
     }
 
+}
+
+// Modal that shows as popup when user do not select an answer
+function selectAnswerModal() {
+    let answerPopup = document.getElementById("select-answer-modal");
+    answerPopup.style.display = "block";
+
+    // Close modal
+    //let closeAnswerPopup = document.getElementsByClassName("close-name-input")[0];
+    let okAnswerButton = document.getElementById("answer-ok");
+    okAnswerButton.addEventListener("click", function () {
+        closeAnswerPopup.style.display = "none";
+    });
+
+    closeAnswerPopup.onclick = function () {
+        closeAnswerPopup.style.display = "none";
+    };
 }
 
 // Reset color and add event listener
