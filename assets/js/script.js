@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /**
  * Show a popup window (Modal) with instructions when the Instructions button is clicked.
+ * Modal taken from https://www.w3schools.com/howto/howto_css_modals.asp
  */
-
 let instructionsPopup = document.getElementById("instructions-modal");
 const instructionsButton = document.getElementById("instructions");
 let span = document.getElementsByClassName("close")[0];
@@ -77,21 +77,20 @@ function checkUserName() {
     }
 }
 
-// Modal that shows as popup when user do not enter user
+/**
+ * Modal that shows as popup when user do not enter user name
+ * Modal taken from https://www.w3schools.com/howto/howto_css_modals.asp
+ */
 function userNameModal() {
     let userNamePopup = document.getElementById("alert-name-input-area");
     userNamePopup.style.display = "block";
 
     // Close modal
-    //let closeUserName = document.getElementsByClassName("close-name-input")[0];
     let okButton = document.getElementById("ok");
     okButton.addEventListener("click", function() {
         userNamePopup.style.display = "none";
     });
     
-    closeUserName.onclick = function () {
-        userNamePopup.style.display = "none";
-    };
 }
 
 // Initiate quiz
@@ -113,7 +112,6 @@ function startQuiz() {
 
 }
 
-// OK
 /**
  * Function to call questions in random order no matter if there are
  * new questions added or removed. 
@@ -199,28 +197,26 @@ function playNextQuestion() {
             endGame();
             // Alert if no question is clicked    
         } else {
-            //alert("Select an answer please");
             selectAnswerModal();
         }
     }
 
 }
 
-// Modal that shows as popup when user do not select an answer
+/**
+ * Modal that shows as popup when user do not select an answer
+ * Modal taken from https://www.w3schools.com/howto/howto_css_modals.asp
+ */
 function selectAnswerModal() {
     let answerPopup = document.getElementById("select-answer-modal");
     answerPopup.style.display = "block";
 
     // Close modal
-    //let closeAnswerPopup = document.getElementsByClassName("close-name-input")[0];
     let okAnswerButton = document.getElementById("answer-ok");
     okAnswerButton.addEventListener("click", function () {
-        closeAnswerPopup.style.display = "none";
+        answerPopup.style.display = "none";
     });
 
-    closeAnswerPopup.onclick = function () {
-        closeAnswerPopup.style.display = "none";
-    };
 }
 
 // Reset color and add event listener
@@ -255,16 +251,19 @@ function getAnswerElementByType(type) {
     return answerColor.find(answer => answer.dataset.type === type);
 }
 
+// Increment correct score
 function incrementScore() {
     let oldScore = parseInt(document.getElementById("correctscore").innerText);
     document.getElementById("correctscore").innerText = ++oldScore;
 }
 
+// Increment incorrect score
 function incrementIncorrectScore() {
     let oldScore = parseInt(document.getElementById("incorrectscore").innerText);
     document.getElementById("incorrectscore").innerText = ++oldScore;
 }
 
+// Reset score if player want to play again
 function resetScore() {
     correctScore = 0;
     incorrectScore = 0;
@@ -281,8 +280,8 @@ function playAgain() {
     gameArea.classList.remove("hide");
 
 }
-// DOES NOT WORK, SHOW GAMEAREA WHEN QUIZ AREA IS CALLED
-//End game if user want to quit beforhand
+
+//End game if user want to quit beforhand or all questions are played
 function endGame() {
     questionsArea.classList.remove("visible");
     questionsArea.classList.add("hide");
