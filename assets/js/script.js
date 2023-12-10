@@ -52,6 +52,7 @@ let displayAnswerA = document.getElementById("answersA");
 let displayAnswerB = document.getElementById("answersB");
 let displayAnswerC = document.getElementById("answersC");
 let showTimer = document.getElementById("timer");
+let timer = 30;
 let numberOfQuestions = 0;
 let questionIndex = 0;
 let correctScore = 0;
@@ -157,8 +158,34 @@ function showQuestion() {
 }
 
 function displayTimer() {
+    let countdown = setInterval(() => {
+        timer--;
+        showTimer.innerText = formatTimer(timer);
+
+        if (timer === 0) {
+            clearInterval(countdown);
+            timesUp();
+        }
+    }, 1000);
+}
+
+/**
+ * Modal that shows as popup when user reaches times up
+ * Modal taken from https://www.w3schools.com/howto/howto_css_modals.asp
+ */
+function timesUp() {
+    let timeIsUp = document.getElementById("times-up-modal");
+    timeIsUp.style.display = "block";
+
+    // Close modal
+    let timesUpOk = document.getElementById("times-up-ok");
+    timesUpOk.addEventListener("click", function() {
+        timeIsUp.style.display = "none";
+    });
+    endGame();
     
 }
+
 
 // Check selected answer
 function checkAnswer(event) {
