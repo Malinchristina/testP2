@@ -1,3 +1,4 @@
+// Structure for questions from https://simplestepscode.com/javascript-quiz-tutorial/
 const quizQuestions = [
     {
         question: "What is the official language of Sweden?",
