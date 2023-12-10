@@ -152,10 +152,17 @@ p {
 #instructions-content {
     color: #000000;
 }
+#instructions-content h3 {
+    margin: 1rem 0 1rem 0;
+}
 
 #instructions-content p {
+    text-align: left;
     line-height: 1.4rem;
-    margin: 0 1rem 0 1rem;
+    margin: 0 1rem 0 1.5rem;
+}
+#instructions-content p:last-of-type {
+    text-align: center;
 }
 
 #instructions {
@@ -231,4 +238,11 @@ i.fa-solid.fa-xmark {
 
 i.fa-solid.fa-down-long {
     margin: 1rem 0 1rem 0;
+}
+
+/* Footer*/
+.footer {
+    color: #000000;
+    margin: 1.4rem 1rem 1rem 1rem;
+    font-size: 90%;
 }
