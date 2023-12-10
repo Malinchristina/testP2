@@ -169,11 +169,11 @@ function checkAnswer(event) {
         event.target.style.backgroundColor = "red";
         incrementIncorrectScore();
     }
-    // ADD COMMENT
-    document.querySelectorAll('.answers').forEach(answer => {
+    // Is this same as disable click answers?
+    /*document.querySelectorAll('.answers').forEach(answer => {
         answer.removeEventListener('click', checkAnswer);
         answer.style.pointerEvents = 'none';
-    });
+    });*/
 
     disableClickAnswers();
 

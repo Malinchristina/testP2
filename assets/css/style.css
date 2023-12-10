@@ -226,15 +226,15 @@ i.fa-solid.fa-xmark {
 
 i.fa-solid.fa-down-long {
     margin: 1rem 0 1rem 0;
+    padding-bottom: 1.4rem;
 }
 
 /* Footer*/
 footer {
     color: #000000;
-    position: fixed;
-    bottom: 0;
     margin: 1.4rem 1rem 1rem 1rem;
     font-size: 90%;
+    padding: 0 1rem 0 1rem;
 }
 .footer {
     display: flex;
@@ -255,11 +255,6 @@ footer {
     .answers {
         width: 80%;
     }
-
-    /* Footer */
-    .footer {
-        padding-left: 14rem;
-    }
 }
 
 /* Media query: laptops and desktops (992px and up) */
@@ -277,10 +272,5 @@ footer {
 
     .answers {
         width: 66%;
-    }
-
-    /* Footer */
-    .footer {
-        padding-left: 20.3rem;
     }
 }
