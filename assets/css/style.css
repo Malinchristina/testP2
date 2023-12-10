@@ -64,19 +64,6 @@ p {
     box-shadow: 0 0 6px 1px rgb(65, 76, 79);
 }
 
-/*#resume {
-    background-color: #006AA7;
-        position: relative;
-        width: 85%;
-        height: auto;
-        box-sizing: border-box;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 2vw;
-        border-radius: 10px;
-        box-shadow: 0 0 6px 1px rgb(65, 76, 79);
-}*/
-
 #enter-name {
     width: 11rem;
     height: 2rem;
@@ -152,6 +139,7 @@ p {
 #instructions-content {
     color: #000000;
 }
+
 #instructions-content h3 {
     margin: 1rem 0 1rem 0;
 }
@@ -241,8 +229,58 @@ i.fa-solid.fa-down-long {
 }
 
 /* Footer*/
-.footer {
+footer {
     color: #000000;
+    position: fixed;
+    bottom: 0;
     margin: 1.4rem 1rem 1rem 1rem;
     font-size: 90%;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem 0 1rem;
+}
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+
+    /* Instrucions*/
+    #instructions-content p {
+        margin: 0 4rem 0 4.5rem;
+    }
+
+    /* Answers */
+    .answers {
+        width: 80%;
+    }
+
+    /* Footer */
+    .footer {
+        padding-left: 14rem;
+    }
+}
+
+/* Media query: laptops and desktops (992px and up) */
+@media screen and (min-width: 992px) {
+
+    /* Game area */
+    #game-area p {
+        margin: 1rem 4rem 0 4rem;
+    }
+
+    /* Instructions*/
+    #instructions-content p {
+        margin: 0 9rem 0 9.5rem;
+    }
+
+    .answers {
+        width: 66%;
+    }
+
+    /* Footer */
+    .footer {
+        padding-left: 20.3rem;
+    }
 }
