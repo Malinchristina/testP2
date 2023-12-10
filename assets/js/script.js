@@ -51,11 +51,13 @@ const shuffledQuestions = shuffleQuizQuestions();
 let displayAnswerA = document.getElementById("answersA");
 let displayAnswerB = document.getElementById("answersB");
 let displayAnswerC = document.getElementById("answersC");
+let showTimer = document.getElementById("timer");
 let numberOfQuestions = 0;
 let questionIndex = 0;
 let correctScore = 0;
 let incorrectScore = 0;
 let chosenAnswer = false;
+
 
 // Array to enable/disable color to indicate correct/incorrect answer
 const answerColor = [displayAnswerA, displayAnswerB, displayAnswerC];
@@ -152,6 +154,10 @@ function showQuestion() {
         endGame();
     }
 
+}
+
+function displayTimer() {
+    
 }
 
 // Check selected answer
