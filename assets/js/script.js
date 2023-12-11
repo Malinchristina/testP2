@@ -149,9 +149,6 @@ function showQuestion() {
     displayAnswerB.innerText = `b. ${currentQuestion.answers.b}`;
     displayAnswerC.innerText = `c. ${currentQuestion.answers.c}`;
 
-    //Reset timer for next question
-    //clearInterval(resetTimer);
-
     displayTimer();
 
     resetBackgroundColor();
@@ -218,12 +215,7 @@ function checkAnswer(event) {
         event.target.style.backgroundColor = "red";
         incrementIncorrectScore();
     }
-    // Is this same as disable click answers?
-    /*document.querySelectorAll('.answers').forEach(answer => {
-        answer.removeEventListener('click', checkAnswer);
-        answer.style.pointerEvents = 'none';
-    });*/
-
+    
     disableClickAnswers();
 
     chosenAnswer = true;
