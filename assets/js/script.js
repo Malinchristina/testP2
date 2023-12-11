@@ -53,6 +53,7 @@ let displayAnswerA = document.getElementById("answersA");
 let displayAnswerB = document.getElementById("answersB");
 let displayAnswerC = document.getElementById("answersC");
 let showTimer = document.getElementById("timer");
+let resetTimer;
 
 let numberOfQuestions = 0;
 let questionIndex = 0;
@@ -104,7 +105,8 @@ function startQuiz() {
     // Reset score DOES NOT WORK
     //correctScore = 0;
     //incorrectScore = 0;
-
+    
+    resume.classList.remove("visble");
     gameArea.classList.remove("visible");
     gameArea.classList.add("hide");
     questionsArea.classList.remove("hide");
@@ -147,6 +149,9 @@ function showQuestion() {
     displayAnswerB.innerText = `b. ${currentQuestion.answers.b}`;
     displayAnswerC.innerText = `c. ${currentQuestion.answers.c}`;
 
+    //Reset timer for next question
+    //clearInterval(resetTimer);
+
     displayTimer();
 
     resetBackgroundColor();
@@ -164,10 +169,16 @@ function displayTimer() {
     let timer = startingSeconds;
     let countdown = setInterval(() => {
         timer--;
+
+        // Stop timer when question has been selected
+        if(chosenAnswer) {
+            clearInterval(resetTimer);
+            chosenAnswer = false;
+        }
         showTimer.innerHTML = `${timer}`;
         
         if (timer <= 0) {
-            clearInterval(countdown);
+            clearInterval(resetTimer);
             endGame();
         }
     }, 1000);
