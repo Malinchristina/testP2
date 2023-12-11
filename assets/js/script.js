@@ -149,7 +149,8 @@ function showQuestion() {
     displayAnswerB.innerText = `b. ${currentQuestion.answers.b}`;
     displayAnswerC.innerText = `c. ${currentQuestion.answers.c}`;
 
-    displayTimer();
+    
+    /*displayTimer();*/
 
     resetBackgroundColor();
 
