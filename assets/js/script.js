@@ -47,12 +47,13 @@ const resume = document.getElementById("resume");
 const userNameLabel = document.getElementById("enter-name");
 const displayQuestions = document.getElementById("questions");
 const shuffledQuestions = shuffleQuizQuestions();
+const startingSeconds = 30;
 
 let displayAnswerA = document.getElementById("answersA");
 let displayAnswerB = document.getElementById("answersB");
 let displayAnswerC = document.getElementById("answersC");
 let showTimer = document.getElementById("timer");
-let timer = 30;
+
 let numberOfQuestions = 0;
 let questionIndex = 0;
 let correctScore = 0;
@@ -112,7 +113,7 @@ function startQuiz() {
     scoreArea.classList.add("visible");
 
     showQuestion();
-
+        
 }
 
 /**
@@ -146,6 +147,8 @@ function showQuestion() {
     displayAnswerB.innerText = `b. ${currentQuestion.answers.b}`;
     displayAnswerC.innerText = `c. ${currentQuestion.answers.c}`;
 
+    displayTimer();
+
     resetBackgroundColor();
 
     // Let user play 10 questions
@@ -156,17 +159,19 @@ function showQuestion() {
     }
 
 }
-
+// Set a timer to each questions of 30 seconds
 function displayTimer() {
+    let timer = startingSeconds;
     let countdown = setInterval(() => {
         timer--;
-        showTimer.innerText = formatTimer(timer);
-
-        if (timer === 0) {
+        showTimer.innerHTML = `${timer}`;
+        
+        if (timer <= 0) {
             clearInterval(countdown);
-            timesUp();
+            endGame();
         }
     }, 1000);
+    
 }
 
 /**
