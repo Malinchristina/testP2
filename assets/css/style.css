@@ -173,6 +173,15 @@ p {
 }
 
 /* Quiz area */
+
+#timer-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+i.fa-regular.fa-clock {
+    margin-right: 0.5rem;
+}
 .answers {
     background-color: #FECC00;
     border-radius: 10px;
