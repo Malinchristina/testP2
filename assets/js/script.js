@@ -41,12 +41,12 @@ span.onclick = function () {
 
 const gameArea = document.getElementById("game-area");
 const questionsArea = document.getElementById("questions-area");
-const answersArea = document.getElementsByClassName("answers-area");
+//const answersArea = document.getElementsByClassName("answers-area");
 const scoreArea = document.getElementById("score-area");
 const resume = document.getElementById("resume");
 const userNameLabel = document.getElementById("enter-name");
 const displayQuestions = document.getElementById("questions");
-const shuffledQuestions = shuffleQuizQuestions();
+//const shuffledQuestions = shuffleQuizQuestions();
 const startingSeconds = 30;
 
 let displayAnswerA = document.getElementById("answersA");
@@ -102,6 +102,7 @@ function userNameModal() {
 function startQuiz() {
     //Reset user name
     userNameLabel.value = "";
+    clearInterval(resetTimer);
     // Reset score DOES NOT WORK
     //correctScore = 0;
     //incorrectScore = 0;
@@ -150,7 +151,7 @@ function showQuestion() {
     displayAnswerC.innerText = `c. ${currentQuestion.answers.c}`;
 
     
-    /*displayTimer();*/
+    displayTimer();
 
     resetBackgroundColor();
 
@@ -165,13 +166,16 @@ function showQuestion() {
 // Set a timer to each questions of 30 seconds
 function displayTimer() {
     let timer = startingSeconds;
-    let countdown = setInterval(() => {
+    resetTimer = setInterval(() => {
         timer--;
 
         // Stop timer when question has been selected
         if(chosenAnswer) {
             clearInterval(resetTimer);
             chosenAnswer = false;
+            showQuestion();
+            return;
+            
         }
         showTimer.innerHTML = `${timer}`;
         
@@ -220,6 +224,8 @@ function checkAnswer(event) {
     disableClickAnswers();
 
     chosenAnswer = true;
+
+    clearInterval(resetTimer);
 
 }
 
