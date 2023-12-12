@@ -181,7 +181,8 @@ function displayTimer() {
         
         if (timer <= 0) {
             clearInterval(resetTimer);
-            endGame();
+            timesUp();
+            //endGame();
         }
     }, 1000);
     
